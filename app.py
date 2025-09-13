@@ -7,12 +7,12 @@ from config import FEATURES
 from data import generate_dummy_data, feature_bounds
 from model import build_models
 from validation import in_range_flags, pass_fail, status_badge
-from utils.visual import (
+from visual import (
     indicator_chart, bar_compare, strength_histogram,
     roi_stacked_bar, shap_local_bar
 )
-from utils.roi import cement_roi
-from utils.pdf_export import pdf_bytes
+from roi import cement_roi
+from pdf_export import pdf_bytes
 
 st.set_page_config(page_title="Cement 28-Day Strength Predictor", layout="wide")
 
@@ -112,4 +112,5 @@ if pdf:
     st.download_button("📄 Download PDF", data=pdf, file_name="cement_strength_report.pdf", mime="application/pdf")
 else:
     st.error("PDF generation failed. Try reducing input fields or refresh.")
+
 
