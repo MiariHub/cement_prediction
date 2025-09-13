@@ -6,7 +6,7 @@ import plotly.express as px
 from config import FEATURES
 from data import generate_dummy_data, feature_bounds
 from model import build_models
-from utils.validation import in_range_flags, pass_fail, status_badge
+from validation import in_range_flags, pass_fail, status_badge
 from utils.visual import (
     indicator_chart, bar_compare, strength_histogram,
     roi_stacked_bar, shap_local_bar
@@ -112,3 +112,4 @@ if pdf:
     st.download_button("📄 Download PDF", data=pdf, file_name="cement_strength_report.pdf", mime="application/pdf")
 else:
     st.error("PDF generation failed. Try reducing input fields or refresh.")
+
