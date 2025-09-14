@@ -14,7 +14,11 @@ from visual import (
 from roi import cement_roi
 from pdf_export import pdf_bytes
 
-st.set_page_config(page_title="Cement 28-Day Strength Predictor", page_icon="https://github.com/MiariHub/cement_prediction/blob/main/electro-pi.png" ,layout="wide")
+st.set_page_config(
+    page_title="Cement 28-Day Strength Predictor",
+    page_icon="https://raw.githubusercontent.com/MiariHub/cement_prediction/main/electro-pi.png",
+    layout="wide"
+)
 
 
 # --- App State ---
@@ -113,6 +117,7 @@ if pdf:
     st.download_button("📄 Download PDF", data=pdf, file_name="cement_strength_report.pdf", mime="application/pdf")
 else:
     st.error("PDF generation failed. Try reducing input fields or refresh.")
+
 
 
 
