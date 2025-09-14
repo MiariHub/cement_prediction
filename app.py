@@ -14,7 +14,8 @@ from visual import (
 from roi import cement_roi
 from pdf_export import pdf_bytes
 
-st.set_page_config(page_title="Cement 28-Day Strength Predictor", layout="wide")
+st.set_page_config(page_title="Cement 28-Day Strength Predictor", layout="wide",page_icon="electro-pi.png")
+
 
 # --- App State ---
 spec_min = 42.5
@@ -112,5 +113,6 @@ if pdf:
     st.download_button("📄 Download PDF", data=pdf, file_name="cement_strength_report.pdf", mime="application/pdf")
 else:
     st.error("PDF generation failed. Try reducing input fields or refresh.")
+
 
 
