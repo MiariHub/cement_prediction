@@ -119,6 +119,15 @@ else:
     st.error("PDF generation failed. Try reducing input fields or refresh.")
 
 
+st.markdown(
+    """
+    <hr style="margin-top:50px; margin-bottom:10px;">
+    <div style="text-align:center; color:grey; font-size:14px;">
+        Developed By <b>ElectroPi</b>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 
 
