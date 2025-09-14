@@ -8,7 +8,7 @@ from datetime import datetime
 
 def pdf_bytes(sample_inputs: dict, pred: float, lo: float, hi: float,
               spec_min: float, status: str, roi: dict | None = None,
-              logo_path: str = "electro-pi.png"):
+              logo_path: str = "https://github.com/MiariHub/cement_prediction/blob/main/electro-pi.png"):
 
     buff = io.BytesIO()
     c = canvas.Canvas(buff, pagesize=A4)
